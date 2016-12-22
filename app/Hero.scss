@@ -1,0 +1,61 @@
+@import 'constants';
+
+.hero {
+  align-items: center;
+  background: no-repeat center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vw;
+  max-height: 400px;
+  justify-content: center;
+  position: relative;
+}
+
+.hero:before {
+  background-color: rgba($color-gray, .2);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hero_large {
+  justify-content: flex-end;
+  max-height: 500px;
+}
+
+.titleWrapper {
+  color: $color-white;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 20px 40px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 40px;
+  margin: 0 0 30px;
+}
+
+@media (max-width: $tablet) {
+  .title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}

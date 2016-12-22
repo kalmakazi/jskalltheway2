@@ -69,8 +69,11 @@ module.exports = {
 
       {
         include: path.join(__dirname, 'app'),
-        loader:'file-loader?name=img/[path][name].[ext]',
-        test: /\.(jpg|jpeg|gif|png|ico)$/,
+        test: /\.(jpe?g|gif|png|ico)$/,
+        loader: 'file-loader',
+        query: {
+          name: 'img/[path][name].[ext]'
+        },
       },
     ],
   },

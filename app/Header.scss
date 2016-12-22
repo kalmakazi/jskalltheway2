@@ -1,0 +1,161 @@
+@import 'constants';
+
+$us-mobile-padding: 20px;
+$us-line-height: 37px;
+
+.staticHeader {
+  font-family: "Cabin", sans-serif;
+  line-height: $us-line-height;
+  margin: 30px 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+.fixedHeader {
+  background-color: $color-pink;
+  font-family: "Cabin", sans-serif;
+  line-height: 2em;
+  padding: 3px 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 200ms ease-in-out;
+}
+
+.fixedHeader_show {
+  transform: translateY(0);
+}
+
+.us {
+  color: $color-white;
+  font-size: 30px;
+  padding: 30px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link {
+  color: $color-white;
+  font-size: 12px;
+  opacity: .7;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.link_selected {
+  pointer-events: none;
+  opacity: 1;
+}
+
+// Static link menu
+.staticHeaderLinkGroupWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.staticHeaderLinkGroup {
+  display: inline-block;
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+  .staticHeaderLinkGroupWrapper,
+  .staticHeaderLinkGroup {
+    position: static;
+  }
+}
+
+// Hamburger menu
+.hamburgerMenu {
+  font-family: "Cabin", sans-serif;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.hamburgerWrapper {
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  transition: background-color 200ms ease-in-out;
+  z-index: 1;
+}
+
+.hamburgerWrapper:hover,
+.hamburgerWrapper_belowHero {
+  background-color: $color-pink;
+}
+
+.hamburger {
+  height: 16px;
+  width: 22px;
+  position: relative;
+}
+
+.topHam,
+.midHam,
+.botHam {
+  position: absolute;
+  border-top: 2px solid #FFF;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.midHam {
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.botHam {
+  top: 14px;
+}
+
+.menuUs {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: $us-line-height;
+  padding: 20px 0;
+}
+
+.menuList {
+  align-items: center;
+  background: $color-pink;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 2px;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.menuList .link {
+  line-height: 2em;
+  font-size: 24px;
+}
+
+
+@media (max-width: $tablet) {
+  .us {
+    font-size: 24px;
+    padding: 30px 0;
+  }
+}

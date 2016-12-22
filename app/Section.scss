@@ -1,0 +1,79 @@
+@import 'constants';
+
+.section {
+  padding: 100px 10px;
+  text-align: center;
+}
+
+.section:nth-of-type(2n + 1) {
+  background-color: rgba($color-pink, 0.1);
+}
+
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 24px;
+}
+
+.imageWrapper {
+  $size: 90vw;
+  $max-size: 400px;
+  border-radius: 200px;
+  display: inline-block;
+  height: $size;
+  margin-bottom: 40px;
+  max-height: $max-size;
+  max-width: $max-size;
+  overflow: hidden;
+  position: relative;
+  width: $size;
+}
+
+.image {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.text {
+  font-size: 18px;
+  font-family: "Cabin", sans-serif;
+  font-weight: lighter;
+  line-height: 1.6;
+}
+
+.text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0;
+}
+
+.text p {
+  color: rgba($color-gray, .5);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.text a {
+  color: $color-link;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.text a:hover {
+  color: $color-link-hover;
+}
+.text a.inlineLink {
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 36px;
+  }
+}

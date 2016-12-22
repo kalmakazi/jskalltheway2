@@ -1,0 +1,24 @@
+.image {
+  align-items: center;
+  background: url('./images/placeholder.jpg') no-repeat center center fixed;
+  background-size: cover;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+  flex-direction: column;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.comingSoon,
+.party {
+  padding: 40px;
+}
+
+.party {
+  cursor: pointer;
+}
