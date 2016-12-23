@@ -61,18 +61,26 @@ function getMenuLinks() {
 
 
 const Us = React.createClass({
+  getDefaultProps() {
+    return {
+      usText: 'Jennifer & Stephen',
+    };
+  },
+
   render() {
     return (
       <a className={css.us} href="/" ref={this.props.usRef}>
-        Jennifer & Stephen
+        {this.props.usText}
       </a>
     );
   },
 });
 
-const StaticHeader = React.createClass({
+
+const CenteredLinks = React.createClass({
   getInitialState() {
     return {
+      beStatic: false,
       beforeRight: null,
       afterLeft: null,
     };
@@ -81,15 +89,29 @@ const StaticHeader = React.createClass({
   componentDidMount() {
     this.positionLinks();
 
-    window.addEventListener('resize', this.positionLinks);
+    this.listener = window.addEventListener('resize', this.positionLinks);
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.positionLinks);
   },
 
   positionLinks() {
-    if (!this.props.isMobile) {
-      const {left, right} = this.us.getBoundingClientRect();
-      const beforeWidth = this.before.getBoundingClientRect().width;
+    if (this.props.hideLinks) {
+      return;
+    }
 
+    const {left, right, width} = this.us.getBoundingClientRect();
+    const beforeWidth = this.before.getBoundingClientRect().width;
+    const afterWidth = this.after.getBoundingClientRect().width
+
+    if (beforeWidth + width + afterWidth > document.body.clientWidth) {
       this.setState({
+        beStatic: true,
+      });
+    } else {
+      this.setState({
+        beStatic: false,
         beforeLeft: left - beforeWidth,
         afterLeft: right,
       });
@@ -102,20 +124,21 @@ const StaticHeader = React.createClass({
 
   renderHeaderLinks() {
     const [beforeLinks, afterLinks] = getMenuLinks();
+    const position = this.state.beStatic ? 'static' : null;
 
     return (
-      <div className={css.staticHeaderLinkGroupWrapper}>
+      <div className={css.staticHeaderLinkGroupWrapper} style={{position}}>
         <div
           className={css.staticHeaderLinkGroup}
           ref={before => this.before = before}
-          style={{left: this.state.beforeLeft}}
+          style={{left: this.state.beforeLeft, position}}
         >
           {beforeLinks}
         </div>
         <div
           className={css.staticHeaderLinkGroup}
           ref={after => this.after = after}
-          style={{left: this.state.afterLeft}}
+          style={{left: this.state.afterLeft, position}}
         >
           {afterLinks}
         </div>
@@ -125,9 +148,20 @@ const StaticHeader = React.createClass({
 
   render() {
     return (
+      <div>
+        <Us usRef={this.usRef} usText={this.props.usText} />
+        {!this.props.hideLinks && this.renderHeaderLinks()}
+      </div>
+    );
+  },
+});
+
+
+const StaticHeader = React.createClass({
+  render() {
+    return (
       <header className={css.staticHeader}>
-        <Us usRef={this.usRef} />
-        {!this.props.isMobile && this.renderHeaderLinks()}
+        <CenteredLinks hideLinks={this.props.isMobile} />
       </header>
     );
   },
@@ -142,7 +176,7 @@ const FixedHeader = React.createClass({
 
     return (
       <div className={fixedHeaderClassName}>
-        {getMenuLinks()}
+        <CenteredLinks hideLinks={this.props.isMobile} usText="J&S" />
       </div>
     );
   },
