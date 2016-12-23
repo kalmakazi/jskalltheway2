@@ -6,7 +6,7 @@ import {syncHistoryWithStore} from 'react-router-redux'
 
 import getStore from './store';
 
-import Ceremony from './Ceremony';
+import Event from './Event';
 import Accommodations from './Accommodations';
 import Travel from './Travel';
 import Registry from './Registry';
@@ -19,7 +19,7 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/accommodations" component={Accommodations} />
-      <Route path="/ceremony" component={Ceremony} />
+      <Route path="/event" component={Event} />
       <Route path="/travel" component={Travel} />
       <Route path="/registry" component={Registry} />
       <Route path="*" component={Placeholder} />

@@ -3,10 +3,13 @@ import React from 'react';
 import Page from './Page';
 import Section from './Section';
 
-import imgEvent from './images/event.jpg';
+import imgEvent from './images/event-hero.jpg';
 import imgCeremony from './images/ceremony.jpg';
 import imgReception from './images/reception.jpg';
 import imgAfterparty from './images/afterparty.jpg';
+
+import imgDonkey from './images/donkey.jpg';
+import imgClassic from './images/classic.jpg';
 
 const NONBREAKING_SPACE = '\u00a0';
 
@@ -25,7 +28,7 @@ export default React.createClass({
           <a href="https://goo.gl/maps/yQKd6BEMz472">See map</a>
         </Section>
 
-        <Section img={imgReception} title="The Reception">
+        <Section img={imgClassic} title="The Reception">
           <h3>7:00pm - 12:00am</h3>
           <p>Tappan Hill Mansion</p>
           <p>200 Gunpowder Ln</p>
@@ -33,7 +36,7 @@ export default React.createClass({
           <a href="https://goo.gl/maps/yQKd6BEMz472" target="_blank">See map</a>
         </Section>
 
-        <Section img={imgAfterparty} title="The Afterparty">
+        <Section img={imgDonkey} title="The Afterparty">
           <h3>12:00am</h3>
           <p>Cooper’s Mill</p>
           <p>at the Westchester Marriott</p>

@@ -5,11 +5,10 @@ import Section from './Section';
 
 import img from './images/travel-hero.jpg';
 
-
 export default React.createClass({
   render() {
     return (
-      <Page title="Travel" img={img}>
+      <Page title="Travel" img={img} posX="85%">
         <Section title="Getting to Westchester">
           <h3>From NYC</h3>
           <p>Take MetroNorth from Grand Central Terminal to Hudson on the Croton-Harmon line.</p>
@@ -21,7 +20,7 @@ export default React.createClass({
 
         <Section title="Getting to Tappan Hill Mansion">
           <h3>From the Westchester Marriott</h3>
-          <p>Shuttles will be provided from the Westchester Marriott before and after the ceremony.</p>
+          <p>Shuttles will be provided to and from Tappan Hill from the Westchester Marriott.</p>
         </Section>
       </Page>
     );
