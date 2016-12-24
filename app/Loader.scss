@@ -1,0 +1,71 @@
+@import 'constants';
+
+$heart-size: 2em;
+
+@keyframes pump {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(5);
+  }
+}
+
+.loaderCover {
+  background-color: $color-white;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2000;
+}
+
+.pulsatingHeartWrapper {
+  height: 100%;
+}
+
+.heartWrapper {
+  position: absolute;
+  animation: pump 4s infinite linear;
+  margin-top: -50px;
+  margin-right: -16px;
+  top: 50%;
+  right: 50%;
+}
+
+.heart {
+  background-color: $color-pink;
+  height: $heart-size;
+  width: $heart-size;
+  position: relative;
+  transform: rotate(-45deg);
+  z-index: 1
+}
+
+.heart_white {
+  background-color: $color-white;
+  background-color: blue;
+}
+
+.heart::after,
+.heart::before {
+  background-color: inherit;
+  border-radius: 50%;
+  content: "";
+  height: $heart-size;
+  width: $heart-size;
+  position: absolute;
+}
+
+.heart::after {
+  left: 50%;
+}
+
+.heart::before {
+  bottom: 50%;
+}
+

@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import Header from './Header';
 import Hero from './Hero';
 
+import Loader from './Loader';
+
 import favicon from './favicon.ico';
 import resetCss from './reset.css';
 import baseCss from './base.css';
@@ -46,6 +48,8 @@ export default React.createClass({
   render() {
     return (
       <div className={css.page}>
+        <Loader />
+
         <Header triggerPos={this.state.heroHeight} />
 
         <Hero
