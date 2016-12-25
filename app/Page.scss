@@ -3,3 +3,18 @@
 .page {
   min-width: 320px;
 }
+
+.fadeIn,
+.fadeIn_active {
+  // ReactCSSTransitionGroup gets angry without this
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 1;
+  transition: all 300ms ease-in;
+}
+
+.fadeOut_active {
+  opacity: 0;
+}

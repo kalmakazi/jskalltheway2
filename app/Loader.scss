@@ -30,11 +30,12 @@ $heart-size: 2em;
 
 .heartWrapper {
   position: absolute;
-  animation: pump 4s infinite linear;
+  animation: pump 4.5s infinite linear;
   margin-top: -50px;
   margin-right: -16px;
   top: 50%;
   right: 50%;
+  transform: scale(0);
 }
 
 .heart {

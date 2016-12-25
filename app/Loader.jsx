@@ -17,9 +17,9 @@ const PulsatingHeart = React.createClass({
   },
 
   render() {
-    const hearts = [0, 1].map(i => {
+    const hearts = [0, 1, 2].map(i => {
       const style = {
-        animationDelay: `${i * 2}s`,
+        animationDelay: `${i * 1.5 + .5}s`,
       };
 
       return (

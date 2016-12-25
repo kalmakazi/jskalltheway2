@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import BlockingBackgroundImage from './BlockingBackgroundImage';
+
 import css from './Hero.scss';
 
 export default React.createClass({
@@ -35,11 +37,13 @@ export default React.createClass({
     };
 
     return (
-      <div className={heroClassName} ref={this.props.heroRef} style={heroStyle}>
-        <div className={css.titleWrapper}>
-          <h1 className={css.title}>{this.props.children}</h1>
-          {subtitle}
-        </div>
+      <div ref={this.props.heroRef}>
+        <BlockingBackgroundImage className={heroClassName} style={heroStyle} src={this.props.img}>
+          <div className={css.titleWrapper}>
+            <h1 className={css.title}>{this.props.children}</h1>
+            {subtitle}
+          </div>
+        </BlockingBackgroundImage>
       </div>
     );
   },

@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classNames from 'classnames';
+import {connect} from 'react-redux';
 
 import Header from './Header';
 import Hero from './Hero';
@@ -11,6 +13,17 @@ import resetCss from './reset.css';
 import baseCss from './base.css';
 import css from './Page.scss';
 
+
+console.log(css.fadeOut, css.fadeOut_active)
+
+const TRANSITION_NAME = {
+  enter: css.fadeIn,
+  enterActive: css.fadeIn_active,
+  leave: css.fadeOut,
+  leaveActive: css.fadeOut_active,
+};
+
+
 const link = document.createElement('link');
 link.type = 'image/x-icon';
 link.rel = 'shortcut icon';
@@ -18,7 +31,7 @@ link.href = favicon;
 document.getElementsByTagName('head')[0].appendChild(link);
 
 
-export default React.createClass({
+const Page = React.createClass({
   getInitialState() {
     return {
       heroHeight: null,
@@ -46,9 +59,18 @@ export default React.createClass({
   },
 
   render() {
+    const loader = this.props.hasBlockingImage && <Loader key="loader"/>;
+    console.log('hasLoader', !!loader)
+
     return (
       <div className={css.page}>
-        <Loader />
+        <ReactCSSTransitionGroup
+          transitionName={TRANSITION_NAME}
+          transitionEnterTimeout={1}
+          transitionLeaveTimeout={300}
+        >
+          {loader}
+        </ReactCSSTransitionGroup>
 
         <Header triggerPos={this.state.heroHeight} />
 
@@ -66,3 +88,11 @@ export default React.createClass({
     );
   },
 });
+
+function mapStateToProps(state) {
+  return {
+    hasBlockingImage: !!state.blockingImages.length,
+  };
+}
+
+export default connect(mapStateToProps)(Page);
