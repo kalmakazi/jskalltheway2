@@ -60,7 +60,6 @@ const Page = React.createClass({
 
   render() {
     const loader = this.props.hasBlockingImage && <Loader key="loader"/>;
-    console.log('hasLoader', !!loader)
 
     return (
       <div className={css.page}>

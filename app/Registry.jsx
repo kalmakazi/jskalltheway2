@@ -12,7 +12,7 @@ import css from './Registry.scss';
 export default React.createClass({
   render() {
     return (
-      <Page title="Registry" img={imgHero}>
+      <Page title="Registry" img={imgHero} posX="90%">
         <Section>
           <p>No gift is greater than your presence at our wedding.</p>
           <p>For those who have requested it, we’re registered at the following stores:</p>
