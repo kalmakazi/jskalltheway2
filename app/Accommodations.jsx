@@ -38,7 +38,7 @@ export default React.createClass({
             To make a reservation, click the link above or call Marriott Reservations at
             (914){NONBREAKING_SPACE}631{NONBREAKING_HYPHEN}2200 or
             (800){NONBREAKING_SPACE}228{NONBREAKING_HYPHEN}9290 and let them know you are booking under the
-            Allen/Kalmakis Wedding Room Block. Rooms must be reserved before August 7th.
+            Allen/Kalmakis Wedding Room Block. To get the special rate, please reserve before August 7th.
           </p>
         </Section>
       </Page>

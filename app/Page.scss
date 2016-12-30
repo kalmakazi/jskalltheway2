@@ -6,7 +6,7 @@
 
 .fadeIn,
 .fadeIn_active {
-  // ReactCSSTransitionGroup gets angry without this
+  // ReactCSSTransitionGroup gets angry without these classes present.
   opacity: 1;
 }
 

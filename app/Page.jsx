@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import Header from './Header';
 import Hero from './Hero';
+import Footer from './Footer';
 
 import Loader from './Loader';
 
@@ -85,6 +86,8 @@ const Page = React.createClass({
         </Hero>
 
         {this.props.children}
+
+        <Footer />
       </div>
     );
   },

@@ -6,12 +6,16 @@ const TICK = 100;
 const FADE_TIME = 5000;
 const PLAYLIST = [
   '2tUBqZG2AbRi7Q0BIrVrEj', // I want to dance with somebody
-  '6o2g1BJvtYQssH84kBYs7y', // Back dat azz up
-  '42ftjU4cTN5UTRksyqBKZJ', // Cake by the ocean
+  '76hfruVvmfQbw0eYn1nmeC', // Cake by the ocean
+  '6b8Be6ljOzmkOmFslEb23P', // 24k Magic
+  '4vp2J1l5RD4gMZwGFLfRAu', // I gotta feelin
+  '2PpruBYCo4H7WOBJ7Q2EwM', // Hey ya!
+  '5nNmj1cLH3r4aA4XDJ2bgY', // September
+  '32OlwWuMpZ6b0aN2RZOeMS', // Uptown funk
 ];
 
 
-class SpotifyPlayer {
+export default class SpotifyPlayer {
   constructor() {
     this.audioObjs = {};
     this.timeouts = [];
@@ -101,6 +105,7 @@ class SpotifyPlayer {
   }
 
   start() {
+    this.playlistIndex = Math.floor(Math.random() * PLAYLIST.length);
     this.playNext(false);
   }
 
@@ -120,7 +125,3 @@ class SpotifyPlayer {
     this.intervals = [];
   }
 }
-
-export {
-  SpotifyPlayer,
-};
