@@ -34,7 +34,7 @@ function getMenuLinks() {
   return [
     [
       (
-        <HeaderLink href="/event" key="event">
+        <HeaderLink href="/" key="event">
           Event
         </HeaderLink>
       ),

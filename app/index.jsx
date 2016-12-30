@@ -19,10 +19,9 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/accommodations" component={Accommodations} />
-      <Route path="/event" component={Event} />
       <Route path="/travel" component={Travel} />
       <Route path="/registry" component={Registry} />
-      <Route path="*" component={Placeholder} />
+      <Route path="*" component={Event} />
     </Router>
   </Provider>,
   document.getElementById('mount')
