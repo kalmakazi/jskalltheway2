@@ -23,7 +23,7 @@ export default React.createClass({
         <Section img={imgCeremony} title="The Ceremony">
           <h3>6:30pm</h3>
           <p>Tappan Hill Mansion</p>
-          <p>200 Gunpowder Ln</p>
+          <p>200 Gunpowder Lane</p>
           <p>Tarrytown, NY 10591</p>
           <a href="https://goo.gl/maps/yQKd6BEMz472">See map</a>
         </Section>
@@ -31,7 +31,7 @@ export default React.createClass({
         <Section img={imgClassic} title="The Reception">
           <h3>7:00pm - 12:00am</h3>
           <p>Tappan Hill Mansion</p>
-          <p>200 Gunpowder Ln</p>
+          <p>200 Gunpowder Lane</p>
           <p>Tarrytown, NY 10591</p>
           <a href="https://goo.gl/maps/yQKd6BEMz472" target="_blank">See map</a>
         </Section>
@@ -40,7 +40,7 @@ export default React.createClass({
           <h3>12:00am</h3>
           <p>Cooper’s Mill</p>
           <p>at the Westchester Marriott</p>
-          <p>670 White Plains Rd</p>
+          <p>670 White Plains Road</p>
           <p>Tarrytown, NY 10591</p>
           <a href="https://goo.gl/maps/kJBypvuySSs" target="_blank">See map</a>
         </Section>

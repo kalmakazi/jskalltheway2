@@ -16,7 +16,7 @@ export default React.createClass({
     return (
       <Page title="Accommodations" img={img}>
         <Section title="Westchester Marriott">
-          <p>670 White Plains Rd</p>
+          <p>670 White Plains Road</p>
           <p>Tarrytown, NY 10591</p>
 
           <p>
@@ -33,10 +33,11 @@ export default React.createClass({
             We have reserved a block of rooms at the Westchester Marriott on Friday, August 25th and
             Saturday, August 26th. The minimum stay is one night and the group rate is $129/night plus tax.
           </p>
+          <p>{NONBREAKING_SPACE}</p>
           <p>
             To make a reservation, click the link above or call Marriott Reservations at
             (914){NONBREAKING_SPACE}631{NONBREAKING_HYPHEN}2200 or
-            (800){NONBREAKING_SPACE}228{NONBREAKING_HYPHEN}9290 and let them know you booking under the
+            (800){NONBREAKING_SPACE}228{NONBREAKING_HYPHEN}9290 and let them know you are booking under the
             Allen/Kalmakis Wedding Room Block. Rooms must be reserved before August 7th.
           </p>
         </Section>

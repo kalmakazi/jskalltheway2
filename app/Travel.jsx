@@ -9,7 +9,7 @@ export default React.createClass({
   render() {
     return (
       <Page title="Travel" img={img} posX="85%">
-        <Section title="Getting to Westchester">
+        <Section title="Getting to Tarrytown">
           <h3>From NYC</h3>
           <p>Take MetroNorth from Grand Central Terminal to Tarrytown on the Hudson line toward Croton-Harmon.</p>
           <a href="http://tripplanner.mta.info/mytrip/ui_web/customplanner/TripPlanner.aspx">See schedule</a>
