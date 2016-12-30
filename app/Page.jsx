@@ -14,8 +14,6 @@ import baseCss from './base.css';
 import css from './Page.scss';
 
 
-console.log(css.fadeOut, css.fadeOut_active)
-
 const TRANSITION_NAME = {
   enter: css.fadeIn,
   enterActive: css.fadeIn_active,
@@ -39,6 +37,10 @@ const Page = React.createClass({
   },
 
   componentDidMount() {
+    if (this.props.title.indexOf('Celebrate') === -1) {
+      document.title = `${document.title} | ${this.props.title}`;
+    }
+
     this.setHeroHeight();
 
     window.addEventListener('resize', this.setHeroHeight);
