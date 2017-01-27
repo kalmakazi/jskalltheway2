@@ -31,14 +31,14 @@ export default React.createClass({
 
           <p>
             We have reserved a block of rooms at the Westchester Marriott on Friday, August 25th and
-            Saturday, August 26th. The minimum stay is one night and the group rate is $129/night plus tax.
+            Saturday, August 26th. Rooms at the preferred rate are limited, so be sure to book early.
           </p>
           <p>{NONBREAKING_SPACE}</p>
           <p>
             To make a reservation, click the link above or call Marriott Reservations at
             (914){NONBREAKING_SPACE}631{NONBREAKING_HYPHEN}2200 or
             (800){NONBREAKING_SPACE}228{NONBREAKING_HYPHEN}9290 and let them know you are booking under the
-            Allen/Kalmakis Wedding Room Block. To get the special rate, please reserve before August 7th.
+            Allen/Kalmakis Wedding Room Block.
           </p>
         </Section>
       </Page>
