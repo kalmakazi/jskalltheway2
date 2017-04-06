@@ -26,6 +26,8 @@ export default React.createClass({
           <p>200 Gunpowder Lane</p>
           <p>Tarrytown, NY 10591</p>
           <a href="https://goo.gl/maps/yQKd6BEMz472">See map</a>
+          <p>{NONBREAKING_SPACE}</p>
+          <p>Black tie optional</p>
         </Section>
 
         <Section img={imgClassic} title="The Reception">
