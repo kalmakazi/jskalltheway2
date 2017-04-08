@@ -10,6 +10,7 @@ import imgAfterparty from './images/afterparty.jpg';
 
 import imgDonkey from './images/donkey.jpg';
 import imgClassic from './images/classic.jpg';
+import imgCopies from './images/copies.jpg';
 
 const NONBREAKING_SPACE = '\u00a0';
 
@@ -40,6 +41,15 @@ export default React.createClass({
 
         <Section img={imgDonkey} title="The Afterparty">
           <h3>12:00am</h3>
+          <p>Cooper’s Mill</p>
+          <p>at the Westchester Marriott</p>
+          <p>670 White Plains Road</p>
+          <p>Tarrytown, NY 10591</p>
+          <a href="https://goo.gl/maps/kJBypvuySSs" target="_blank">See map</a>
+        </Section>
+
+        <Section img={imgCopies} title="The Farewell Brunch">
+          <h3>10:00am</h3>
           <p>Cooper’s Mill</p>
           <p>at the Westchester Marriott</p>
           <p>670 White Plains Road</p>
