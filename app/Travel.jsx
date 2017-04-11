@@ -14,7 +14,7 @@ export default React.createClass({
           <p>Take MetroNorth from Grand Central Terminal to Tarrytown on the Hudson line toward Croton-Harmon.</p>
           <a href="http://tripplanner.mta.info/mytrip/ui_web/customplanner/TripPlanner.aspx">See schedule</a>
 
-          <h3>From Boston</h3>
+          <h3>Outside New York City</h3>
           <p><a href="https://goo.gl/maps/onfiKVpHRqM2" target="_blank">Use Google</a>. They know better than we do!</p>
         </Section>
 
