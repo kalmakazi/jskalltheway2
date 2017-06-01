@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js --progress",
     "start": "node server.js",
-    "deploy": "cp ./build/index.html ./build/200.html; surge ./build/ --domain www.jenniferandstephen2017.com"
+    "deploy": "npm run build; cp ./build/index.html ./build/200.html; surge ./build/ --domain www.jenniferandstephen2017.com"
   },
   "author": "Stephen Kalmakis",
   "license": "ISC",
@@ -22,7 +22,7 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "spotify-web-api-js": "^0.21.1"
+    "spotify-web-api-js": "0.22.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.4",
