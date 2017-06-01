@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js --progress",
     "start": "node server.js",
-    "deploy": "surge ./build/ --domain www.jenniferandstephen2017.com"
+    "deploy": "cp ./build/index.html ./build/200.html; surge ./build/ --domain www.jenniferandstephen2017.com"
   },
   "author": "Stephen Kalmakis",
   "license": "ISC",
