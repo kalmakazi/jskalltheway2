@@ -29,6 +29,9 @@ export default React.createClass({
           <a href="https://goo.gl/maps/yQKd6BEMz472">See map</a>
           <p>{NONBREAKING_SPACE}</p>
           <p>Black tie optional</p>
+          <p>{NONBREAKING_SPACE}</p>
+          <p>Please arrive early.</p>
+          <p>The ceremony starts promptly at 6:30pm.</p>
         </Section>
 
         <Section img={imgClassic} title="Reception">
